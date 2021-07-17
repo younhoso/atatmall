@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+.borderbox {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  overflow: hidden;
+}
+
+/*
+ * message
+ * position: fixed
+ * z-index: 100
+ * background: rgba(239,239,239,0.8);
+ */
+.agent_message_section {
+  position: fixed;
+  z-index: 120;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  overflow: hidden;
+  padding: 0px;
+}
+
+/*
+ * background: rgba(0,0,0,0.8);
+ * border-bottom: 1px solid rgba(0,0,255,0.8);
+ * color: #ffffff;
+ */
+.agent_message_section .message {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  overflow: hidden;
+  background: rgba(239, 239, 239, 0.9) url(images/close.png) right top no-repeat;
+  border: 1px solid rgba(207, 207, 239, 0.9);
+  margin: 2px;
+  border-radius: 5px 0px 5px 0px;
+  color: #534680;
+  font-weight: bold;
+  font-size: 13px;
+  padding: 5px 30px;
+}
+
+.agent_message_section .error {
+  border: 1px solid rgba(239, 107, 107, 0.9);
+  color: #804653;
+}
+
+/*
+ * debug
+ */
+
+.agent_debug_section {
+  position: fixed;
+  left: 0px;
+  bottom: 0px;
+  width: 100%;
+  z-index: 100;
+  padding: 0px;
+}
+
+.agent_debug {
+  background: #000000;
+  border-bottom: 1px dashed #999999;
+  color: #ffffff;
+  padding: 5px 30px;
+}
+
+.agent_debug:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+
+/*
+ * dialog
+ */
+.agent_dialog_section {
+  position: absolute;
+  z-index: 100;
+  background: #eeeeee;
+  border: 2px solid #dddddd;
+  top: 0px;
+  left: 0px;
+  padding: 20px 30px;
+}
+
+.agent_dialog_section .btn_close {
+  width: 24px;
+  height: 24px;
+  background: url(images/close.png) left top no-repeat;
+  cursor: pointer;
+  position: absolute;
+  top: -6px;
+  right: -6px;
+}
+
+/*
+ * loading
+.agent_background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 101;
+    background-color: rgba(255, 255, 255, 0.8);
+    background-image: linear-gradient(45deg, white 25%, transparent 25%, transparent 75%, white 75%, white), linear-gradient(45deg, white 25%, transparent 25%, transparent 75%, white 75%, white);
+    background-size: 20px 20px;
+    background-position: 0 0, 10px 10px;
+    opacity: 0.8;
+}
+*/
+
+.agent_loading_section {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+
+.agent_loading_section .sec_loading {
+  position: absolute;
+  left: 0px;
+  /*top: 0px;*/
+  width: 100%;
+  height: 100%;
+  z-index: 110;
+}
+
+.agent_loading_section .icon_loading {
+  margin: 0 auto;
+  border-radius: 24px;
+  width: 48px;
+  height: 48px;
+  background: #ffffff url(images/loading.gif) center center no-repeat;
+}
+
+/*
+ * widget
+ */
+[data-r-role="link"],
+[data-r-role="button"],
+[data-r-role="btn"] {
+  cursor: pointer;
+}
+
+.agent_cursor_pointer {
+  cursor: pointer;
+}
+
+/* .agent_field_error {
+    background: rgba(255, 0, 0, 0.5);
+} */
